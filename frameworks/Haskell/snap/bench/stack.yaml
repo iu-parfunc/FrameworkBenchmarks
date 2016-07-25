@@ -3,3 +3,7 @@ packages:
 - '.'
 extra-deps: []
 resolver: lts-6.3
+system-ghc: true
+compiler: ghc-7.10.4
+compiler-check: match-exact
+# compiler-check: newer-minor

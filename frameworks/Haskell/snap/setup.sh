@@ -6,6 +6,7 @@ fw_depends stack
 
 cd bench
 
-${IROOT}/stack --allow-different-user build --install-ghc
+export PATH=/opt/ghc/bin:$PATH
+${IROOT}/stack --allow-different-user build --system-ghc --no-install-ghc
 
 ${IROOT}/stack --allow-different-user exec snap-bench -- +RTS -A4M -N -qg2 -I0 -G2 &
