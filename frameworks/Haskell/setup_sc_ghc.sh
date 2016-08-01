@@ -11,6 +11,7 @@ if ! [ -d /opt/ghc ]; then
   sudo cp -a ghc-sc-v0.4-opt /opt/ghc
 fi
 export PATH=/opt/ghc/bin:$PATH
+sudo ln -s -f /opt/ghc/bin/* /usr/bin/
 echo "Custom SC-GHC set up."
 
 which -a ghc
