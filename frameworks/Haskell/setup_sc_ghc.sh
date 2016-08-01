@@ -5,9 +5,11 @@ set -xe
 DIR=`pwd`
 
 cd /tmp/
-wget -q http://cs.indiana.edu/~rrnewton/temp/ghc-sc-v0.4-opt.tgz
-tar xf ghc-sc-v0.4-opt.tgz
-sudo mv ghc-sc-v0.4-opt /opt/ghc
+if ! [ -d /opt/ghc ]; then 
+  wget -q http://cs.indiana.edu/~rrnewton/temp/ghc-sc-v0.4-opt.tgz
+  tar xf ghc-sc-v0.4-opt.tgz
+  sudo cp -a ghc-sc-v0.4-opt /opt/ghc
+fi
 export PATH=/opt/ghc/bin:$PATH
 echo "Custom SC-GHC set up."
 
