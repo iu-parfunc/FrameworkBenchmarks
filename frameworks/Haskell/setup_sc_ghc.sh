@@ -11,4 +11,7 @@ sudo mv ghc-sc-v0.4-opt /opt/ghc
 export PATH=/opt/ghc/bin:$PATH
 echo "Custom SC-GHC set up."
 
+which -a ghc
+ghc --version
+
 cd "$DIR"
